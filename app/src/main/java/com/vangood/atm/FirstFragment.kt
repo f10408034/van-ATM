@@ -34,7 +34,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val pref = requireContext().getSharedPreferences("atm", Context.MODE_PRIVATE)
-        
+
         val checked = pref.getBoolean("rem_username", false)
         binding.cbRemember.isChecked = checked
         binding.cbRemember.setOnCheckedChangeListener { compoundButton, checked ->
